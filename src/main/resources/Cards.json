@@ -1,0 +1,210 @@
+[
+  {
+    "cardValue": "2",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "2",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "2",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "2",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "3",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "3",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "3",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "3",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "4",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "4",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "4",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "4",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "5",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "5",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "5",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "5",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "6",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "6",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "6",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "6",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "7",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "7",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "7",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "7",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "8",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "8",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "8",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "8",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "9",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "9",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "9",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "9",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "10",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "10",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "10",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "10",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "J",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "J",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "J",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "J",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "Q",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "Q",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "Q",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "Q",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "K",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "K",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "K",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "K",
+    "cardSuit": "CLUB"
+  },
+  {
+    "cardValue": "A",
+    "cardSuit": "DIAMOND"
+  },
+  {
+    "cardValue": "A",
+    "cardSuit": "HEART"
+  },
+  {
+    "cardValue": "A",
+    "cardSuit": "SPADE"
+  },
+  {
+    "cardValue": "A",
+    "cardSuit": "CLUB"
+  }
+]

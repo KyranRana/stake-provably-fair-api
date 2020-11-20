@@ -1,0 +1,17 @@
+[
+  {
+    "clientSeed": "bb62964774",
+    "serverSeed": "18e93f4a7b5b58d2569765766d1b6c3296bbd8430d6f20249044d72f14720159",
+    "nonce": 1
+  },
+  {
+    "clientSeed": "3c83fc7e07",
+    "serverSeed": "a9a09f7f84c9dc6d4f46f9b702d8e7e211e1fc219ac10e1145c4ca032eb000c6",
+    "nonce": 3
+  },
+  {
+    "clientSeed": "8b3ca8298c",
+    "serverSeed": "a5022ccf5dd5a76d2014278e3d91d1dfc47c3f12e683ea0c8151fdc2f944beb1",
+    "nonce": 54
+  }
+]
