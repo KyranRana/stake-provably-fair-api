@@ -22,7 +22,10 @@ export default function verifyBlueSamurai(
   const numberOfFloats = (toRound - fromRound + 1) * NUMBER_OF_FLOATS_PER_ROUND
   
   const { floats, hmacsUsed } = getFloatsForGameSeedStartingFromOffset(
-    gameSeed, numberOfFloats, numberOfIgnoredFloats)
+    gameSeed, 
+    numberOfFloats, 
+    numberOfIgnoredFloats
+  )
 
   let cellPosition = 0;
   
@@ -62,8 +65,10 @@ function selectSymbol(cellNumber: number, isOuter: boolean): Symbol {
     current += isOuter ? outer : inner
     index++
   }
+  
   if (!selectedSymbol) {
     throw Error('no symbol')
   }
+  
   return selectedSymbol as Symbol
 }
