@@ -40,9 +40,6 @@ export default function verifyBlueSamurai(
     symbols[0][3] = Symbol.NONE
     symbols[4][3] = Symbol.NONE
     
-    
-    console.log(symbols)
-
     rounds.push(transpose(symbols))
   }
   return { results: rounds, hmacsUsed }
