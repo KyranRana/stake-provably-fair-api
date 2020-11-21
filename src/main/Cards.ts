@@ -7,8 +7,8 @@ import { GameSeed } from "./model/GameSeed"
 import Cards from "./resources/Cards.json"
 
 export default function verifyCards(
-  gameSeed: GameSeed, 
-  numberOfCards: number
+  gameSeed:         GameSeed, 
+  numberOfCards:    number
 ): MultipleResultGameEvent<Card> {
   
   const { floats, hmacsUsed } = getFloatsForGameSeed(gameSeed, numberOfCards) 
