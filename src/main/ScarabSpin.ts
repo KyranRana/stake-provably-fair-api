@@ -10,7 +10,10 @@ const NUMBER_OF_FLOATS_PER_ROUND = 5
 const OUTCOMES_FOR_REELS = [30, 30, 30, 30, 41]
 
 export default function verifyScarabSpin(
-  gameSeed: GameSeed, fromRound: number, toRound: number): MultipleResultGameEvent<Symbol[][]> {
+  gameSeed: GameSeed, 
+  fromRound: number, 
+  toRound: number
+): MultipleResultGameEvent<Symbol[][]> {
     
   const numberOfIgnoredFloats = fromRound * NUMBER_OF_FLOATS_PER_ROUND
   const numberOfFloats = (toRound - fromRound + 1) * NUMBER_OF_FLOATS_PER_ROUND
