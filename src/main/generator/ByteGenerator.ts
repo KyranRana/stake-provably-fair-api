@@ -4,9 +4,9 @@ import { InternalGameEventBytes } from "../model/GameEvent"
 import { GameSeed } from "../model/GameSeed"
 
 export function getBytesForGameSeedStartingFromOffset(
-  gameSeed: GameSeed, 
-  numberOfBytes: number, 
-  numberOfIgnoredBytes: number
+  gameSeed:               GameSeed, 
+  numberOfBytes:          number, 
+  numberOfIgnoredBytes:   number
 ): InternalGameEventBytes {
 
   const numberOfIgnoredHmacs = Math.floor(numberOfIgnoredBytes / 32)
