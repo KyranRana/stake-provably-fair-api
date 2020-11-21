@@ -26,11 +26,15 @@ export default function verifyBlueSamurai(
     numberOfFloats, 
     numberOfIgnoredFloats
   )
-
-  let cellPosition = 0;
   
-  const rounds = []
+  const rounds = generateRounds(fromRound, toRound, floats)
+  return { results: rounds, hmacsUsed }
+}
 
+function generateRounds(fromRound: number, toRound: number, floats: number[]): Symbol[][][] {
+  let cellPosition = 0;
+
+  let rounds = []
   for (var i = fromRound; i <= toRound; i++) {
     const symbols = REELS_LENGTHS.map((reel, reelPosition) =>
       reel.map(() => {
@@ -48,7 +52,7 @@ export default function verifyBlueSamurai(
     
     rounds.push(transpose(symbols))
   }
-  return { results: rounds, hmacsUsed }
+  return rounds
 }
 
 function selectSymbol(cellNumber: number, isOuter: boolean): Symbol {
