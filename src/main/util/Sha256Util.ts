@@ -12,9 +12,9 @@ export function getSha256HmacForMultiplayerGameSeed(
 }
 
 export function getSha256HmacsForGameSeedStartingFromOffset(
-  gameSeed: GameSeed, 
-  numberOfHmacs: number, 
-  offset: number
+  gameSeed:       GameSeed, 
+  numberOfHmacs:  number, 
+  offset:         number
 ): string[] {
 
   const { clientSeed, serverSeed, nonce } = gameSeed
