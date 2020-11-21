@@ -56,16 +56,16 @@ function generateRounds(fromRound: number, toRound: number, floats: number[]): S
 }
 
 function selectSymbol(cellNumber: number, isOuter: boolean): Symbol {
+  let selectedSymbol
+  
   let current = 0
   let index = 0
-
-  let selectedSymbol
-
+  
   while (current <= cellNumber) {
     const { symbol, outer, inner } = Probabilities[index]
     
-    selectedSymbol = symbol
-    
+    selectedSymbol = symbol 
+  
     current += isOuter ? outer : inner
     index++
   }
