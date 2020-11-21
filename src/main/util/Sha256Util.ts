@@ -4,14 +4,18 @@ import { encode } from "@stablelib/utf8"
 import { GameSeed, MultiplayerGameSeed } from "../model/GameSeed"
 
 export function getSha256HmacForMultiplayerGameSeed(
-  gameSeed: MultiplayerGameSeed): string {
+  gameSeed: MultiplayerGameSeed
+): string {
   
   const { hash, seed } = gameSeed
   return getSha256Hmac(hash, seed)
 }
 
 export function getSha256HmacsForGameSeedStartingFromOffset(
-  gameSeed: GameSeed, numberOfHmacs: number, offset: number): string[] {
+  gameSeed: GameSeed, 
+  numberOfHmacs: number, 
+  offset: number
+): string[] {
 
   const { clientSeed, serverSeed, nonce } = gameSeed
 
