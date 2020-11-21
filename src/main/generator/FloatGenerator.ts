@@ -6,7 +6,8 @@ import { InternalGameEventFloat, InternalGameEventFloats } from "../model/GameEv
 import { GameSeed, MultiplayerGameSeed } from "../model/GameSeed"
 
 export function getFloatForMultiplayerGameSeed(
-  gameSeed: MultiplayerGameSeed): InternalGameEventFloat {
+  gameSeed: MultiplayerGameSeed
+): InternalGameEventFloat {
   
   const hmac = getSha256HmacForMultiplayerGameSeed(gameSeed)
   const float = parseInt(hmac.substr(0, 8), 16)
@@ -15,20 +16,23 @@ export function getFloatForMultiplayerGameSeed(
 }
 
 export function getFloatForGameSeed(gameSeed: GameSeed): InternalGameEventFloat {
-  const { floats, hmacsUsed } = getFloatsForGameSeed(gameSeed, 1)
-
+  const  { floats, hmacsUsed } = getFloatsForGameSeed(gameSeed, 1)
   return { float: floats[0], hmacsUsed }
 }
 
 export function getFloatsForGameSeed(
-  gameSeed: GameSeed, numberOfFloats: number): InternalGameEventFloats {
-  
+  gameSeed: GameSeed, 
+  numberOfFloats: number
+): InternalGameEventFloats {  
   return getFloatsForGameSeedStartingFromOffset(gameSeed, numberOfFloats, 0)
 }
 
 export function getFloatsForGameSeedStartingFromOffset(
-  gameSeed: GameSeed, numberOfFloats: number, offset: number): InternalGameEventFloats {  
-
+  gameSeed: GameSeed, 
+  numberOfFloats: number, 
+  offset: number
+): InternalGameEventFloats {  
+  
   const { bytes, hmacsUsed } = getBytesForGameSeedStartingFromOffset(
     gameSeed, numberOfFloats * 4, offset * 4)
 
