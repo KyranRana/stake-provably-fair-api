@@ -58,8 +58,8 @@ function selectSymbol(cellNumber: number, isOuter: boolean): Symbol {
     const { symbol, outer, inner } = Probabilities[index]
     
     selectedSymbol = symbol
-    current += isOuter ? outer : inner
     
+    current += isOuter ? outer : inner
     index++
   }
   if (!selectedSymbol) {
