@@ -4,7 +4,10 @@ import { InternalGameEventBytes } from "../model/GameEvent"
 import { GameSeed } from "../model/GameSeed"
 
 export function getBytesForGameSeedStartingFromOffset(
-  gameSeed: GameSeed, numberOfBytes: number, numberOfIgnoredBytes: number): InternalGameEventBytes {
+  gameSeed: GameSeed, 
+  numberOfBytes: number, 
+  numberOfIgnoredBytes: number
+): InternalGameEventBytes {
 
   const numberOfIgnoredHmacs = Math.floor(numberOfIgnoredBytes / 32)
   const numberOfHmacs = Math.ceil((numberOfBytes + (numberOfIgnoredBytes % 32)) / 32)
@@ -18,7 +21,10 @@ export function getBytesForGameSeedStartingFromOffset(
 }
 
 function getBytesFromHmacsStartingFromOffsetForFirstHmac(
-  numberOfBytes: number, hmacs: string[], offset: number): number[] {
+  numberOfBytes: number, 
+  hmacs: string[], 
+  offset: number
+): number[] {
   
   const bytes: number[] = []
   
