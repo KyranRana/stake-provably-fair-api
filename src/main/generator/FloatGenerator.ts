@@ -34,7 +34,10 @@ export function getFloatsForGameSeedStartingFromOffset(
 ): InternalGameEventFloats {  
   
   const { bytes, hmacsUsed } = getBytesForGameSeedStartingFromOffset(
-    gameSeed, numberOfFloats * 4, offset * 4)
+    gameSeed, 
+    numberOfFloats  * 4, 
+    offset          * 4
+  )
 
   const floats = chunk(bytes, 4).map(fourBytes =>
     +fourBytes.reduce(calculateFloatFromFourBytes, 0).toFixed(12))
