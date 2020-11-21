@@ -9,16 +9,16 @@ import { Spin } from "./model/Wheel/Spin"
 import WheelMultiplierTable from "./resources/WheelMultiplierTable.json"
 
 export default function verifyWheel(
-  gameSeed: GameSeed, 
-  risk: Risk, 
-  segments: Segments
+  gameSeed:   GameSeed, 
+  risk:       Risk, 
+  segments:   Segments
 ): SingleResultGameEvent<Spin> {
   
   const { float, hmacsUsed } = getFloatForGameSeed(gameSeed)
   
   const spin = {
-    multipliers: WheelMultiplierTable[segments][risk], 
-    index: Math.floor(float * segments)
+    multipliers:  WheelMultiplierTable[segments][risk], 
+    index:        Math.floor(float * segments)
   }
   return { result: spin, hmacsUsed }
 }
