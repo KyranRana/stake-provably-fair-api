@@ -34,7 +34,7 @@ export default function verifyBlueSamurai(
 function generateRounds(fromRound: number, toRound: number, floats: number[]): Symbol[][][] {
   let cellPosition = 0;
 
-  let rounds = []
+  const rounds = []
   for (var i = fromRound; i <= toRound; i++) {
     const symbols = REELS_LENGTHS.map((reel, reelPosition) =>
       reel.map(() => {
