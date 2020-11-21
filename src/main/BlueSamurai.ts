@@ -13,7 +13,10 @@ const REELS_LENGTHS = [3, 4, 4, 4, 3]
 const NUMBER_OF_FLOATS_PER_ROUND = 18
 
 export default function verifyBlueSamurai(
-  gameSeed: GameSeed, fromRound: number, toRound: number): MultipleResultGameEvent<Symbol[][]> {
+  gameSeed: GameSeed, 
+  fromRound: number, 
+  toRound: number
+): MultipleResultGameEvent<Symbol[][]> {
 
   const numberOfIgnoredFloats = fromRound * NUMBER_OF_FLOATS_PER_ROUND
   const numberOfFloats = (toRound - fromRound + 1) * NUMBER_OF_FLOATS_PER_ROUND
@@ -53,8 +56,10 @@ function selectSymbol(cellNumber: number, isOuter: boolean): Symbol {
 
   while (current <= cellNumber) {
     const { symbol, outer, inner } = Probabilities[index]
+    
     selectedSymbol = symbol
     current += isOuter ? outer : inner
+    
     index++
   }
   if (!selectedSymbol) {
