@@ -27,9 +27,9 @@ import { Symbol as ScarabSpinSymbol } from "../model/ScarabSpin/Symbol"
 
 export class StakeVerificationApi {
   verifyBlueSamurai(
-    gameSeed: GameSeed, 
-    fromRound: number, 
-    toRound: number
+    gameSeed:   GameSeed, 
+    fromRound:  number, 
+    toRound:    number
   ): MultipleResultGameEvent<BlueSamuraiSymbol[][]> {    
     return verifyBlueSamuraiInternal(gameSeed, fromRound, toRound)
   }
@@ -63,9 +63,9 @@ export class StakeVerificationApi {
   }
 
   verifyPlinko(
-    gameSeed: GameSeed, 
-    risk: Risk,
-    rows: PlinkoRows
+    gameSeed:   GameSeed, 
+    risk:       Risk,
+    rows:       PlinkoRows
   ): SingleResultGameEvent<PlinkoDrop> {  
     return verifyPlinkoInternal(gameSeed, risk, rows)
   }
@@ -75,9 +75,9 @@ export class StakeVerificationApi {
   }
 
   verifyScarabSpin(
-    gameSeed: GameSeed, 
-    fromRound: number, 
-    toRound: number
+    gameSeed:   GameSeed, 
+    fromRound:  number, 
+    toRound:    number
   ): MultipleResultGameEvent<ScarabSpinSymbol[][]> {    
     return verifyScarabSpinInternal(gameSeed, fromRound, toRound)
   }
@@ -91,9 +91,9 @@ export class StakeVerificationApi {
   }
 
   verifyWheel(
-    gameSeed: GameSeed, 
-    risk: Risk, 
-    segments: WheelSegments
+    gameSeed:   GameSeed, 
+    risk:       Risk, 
+    segments:   WheelSegments
   ): SingleResultGameEvent<WheelSpin> {
     return verifyWheelInternal(gameSeed, risk, segments)
   }
