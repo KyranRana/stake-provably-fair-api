@@ -21,16 +21,16 @@ export function getFloatForGameSeed(gameSeed: GameSeed): InternalGameEventFloat 
 }
 
 export function getFloatsForGameSeed(
-  gameSeed: GameSeed, 
-  numberOfFloats: number
+  gameSeed:         GameSeed, 
+  numberOfFloats:   number
 ): InternalGameEventFloats {  
   return getFloatsForGameSeedStartingFromOffset(gameSeed, numberOfFloats, 0)
 }
 
 export function getFloatsForGameSeedStartingFromOffset(
-  gameSeed: GameSeed, 
-  numberOfFloats: number, 
-  offset: number
+  gameSeed:         GameSeed, 
+  numberOfFloats:   number, 
+  offset:           number
 ): InternalGameEventFloats {  
   
   const { bytes, hmacsUsed } = getBytesForGameSeedStartingFromOffset(
