@@ -10,7 +10,10 @@ import { Rows } from "./model/Plinko/Rows"
 import PlinkoMultiplierRows from "./resources/PlinkoMultiplierRows.json"
 
 export default function verifyPlinko(
-  gameSeed: GameSeed, risk: Risk, rows: Rows): SingleResultGameEvent<Drop> {
+  gameSeed: GameSeed, 
+  risk: Risk, 
+  rows: Rows
+): SingleResultGameEvent<Drop> {
   
   const { floats, hmacsUsed } = getFloatsForGameSeed(gameSeed, rows)  
 
