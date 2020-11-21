@@ -32,7 +32,8 @@ function generateRounds(fromRound: number, toRound: number, floats: number[]): S
   const rounds = []
   for (let i = fromRound; i <= toRound; i++) {
     const symbols = OUTCOMES_FOR_REELS.map((outcomesForReel, j) => {
-      const index = Math.floor(floats[rounds.length * NUMBER_OF_FLOATS_PER_ROUND + j] * outcomesForReel)
+      const float = floats[rounds.length * NUMBER_OF_FLOATS_PER_ROUND + j]
+      const index = Math.floor(float * outcomesForReel)
 
       return [
         inBounds(ScarabSlotReels[j], index - 1),
