@@ -19,8 +19,16 @@ export default function verifyScarabSpin(
   const numberOfFloats = (toRound - fromRound + 1) * NUMBER_OF_FLOATS_PER_ROUND
 
   const { floats, hmacsUsed } = getFloatsForGameSeedStartingFromOffset(
-    gameSeed, numberOfFloats, numberOfIgnoredFloats)
+    gameSeed, 
+    numberOfFloats, 
+    numberOfIgnoredFloats
+  )
 
+  const rounds = generateRounds(fromRound, toRound, floats)
+  return { results: rounds, hmacsUsed }
+}
+
+function generateRounds(fromRound: number, toRound: number, floats: number[]): Symbol[][][] {
   const rounds = []
   for (let i = fromRound; i <= toRound; i++) {
     const symbols = OUTCOMES_FOR_REELS.map((outcomesForReel, j) => {
@@ -34,7 +42,7 @@ export default function verifyScarabSpin(
     })
     rounds.push(symbols)
   }
-  return { results: rounds, hmacsUsed }
+  return rounds
 }
 
 function inBounds(array: any[], index: number): any {
