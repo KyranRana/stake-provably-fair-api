@@ -18,12 +18,9 @@ export function getSha256HmacsForGameSeedStartingFromOffset(
 ): string[] {
 
   const { clientSeed, serverSeed, nonce } = gameSeed
-
-  const hmacs = []
-  for (let i = 0; i < numberOfHmacs; i++) {
-    hmacs.push(getSha256Hmac(serverSeed, `${clientSeed}:${nonce}:${i + offset}`))
-  }
-  return hmacs
+  
+  return Array.from({ length: numberOfHmacs }, 
+    (_, i) => getSha256Hmac(serverSeed, `${clientSeed}:${nonce}:${i + offset}`))
 }
 
 function getSha256Hmac(key: string, data: string): string {
