@@ -37,19 +37,19 @@ function generateRounds(fromRound: number, toRound: number, floats: number[]): S
   return rounds
 }
 
-
 function generateView(currentRound: number, floats: number[]) {
   let cellPosition = currentRound * NUMBER_OF_FLOATS_PER_ROUND
 
   const symbols: Symbol[][] = []
 
-  for (let i = 0; i < REELS_LENGTHS.length; i++) {    
+  for (let i = 0; i < REELS_LENGTHS.length; i++) {   
     const isOuter = i === 0 || i === 4
-
+    
     symbols[i] = []
+    
     for (let j = 0; j < REELS_LENGTHS[i]; j++) {
       const float = floats[currentRound * NUMBER_OF_FLOATS_PER_ROUND + cellPosition++]
-
+      
       symbols[i][j] = selectSymbol(float, isOuter)
     }
   }
@@ -68,14 +68,12 @@ function selectSymbol(cellNumber: number, isOuter: boolean): Symbol {
   while (current <= cellNumber) {
     const { symbol, outer, inner } = Probabilities[index]
     
-    selectedSymbol = symbol 
+    selectedSymbol = symbol
     current += isOuter ? outer : inner
     index++
   }
-
   if (!selectedSymbol) {
     throw Error('no symbol')
   }
-  
   return selectedSymbol as Symbol
 }
