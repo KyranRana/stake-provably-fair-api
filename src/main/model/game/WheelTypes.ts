@@ -5,3 +5,8 @@ export enum Segments {
   FOURTY = 40,
   FIFTY = 50
 }
+
+export interface Spin {
+  multipliers: number[],
+  index: number
+}

@@ -2,7 +2,7 @@ import { getFloatsForGameSeed } from "./generator/FloatGenerator"
 
 import { MultipleResultGameEvent } from "./model/GameEvent"
 import { GameSeed } from "./model/GameSeed"
-import { Gem } from "./model/Diamonds/Gem"
+import { Gem } from "./model/game/DiamondsTypes"
 
 import Gems from "./resources/Gems.json"
 

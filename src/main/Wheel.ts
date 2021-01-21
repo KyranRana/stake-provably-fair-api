@@ -3,8 +3,7 @@ import { getFloatForGameSeed } from "./generator/FloatGenerator"
 import { SingleResultGameEvent } from "./model/GameEvent"
 import { GameSeed } from "./model/GameSeed"
 import { Risk } from "./model/Risk"
-import { Segments } from "./model/Wheel/Segments"
-import { Spin } from "./model/Wheel/Spin"
+import { Segments, Spin } from "./model/game/WheelTypes"
 
 import WheelMultiplierTable from "./resources/WheelMultiplierTable.json"
 

@@ -2,7 +2,7 @@ import verifyScarabSpin from "../main/ScarabSpin"
 
 import { MultipleResultGameEvent } from "../main/model/GameEvent"
 import { GameSeed } from "../main/model/GameSeed"
-import { Symbol } from "../main/model/ScarabSpin/Symbol"
+import { Symbol } from "../main/model/game/ScarabSpinTypes"
 
 import GameSeeds from "./resources/GameSeeds.json"
 

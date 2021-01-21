@@ -14,16 +14,15 @@ import verifyVideoPokerInternal from "../VideoPoker"
 import verifyWheelInternal from "../Wheel"
 
 import { Card } from "../model/Card"
-import { Drop as PlinkoDrop } from "../model/Plinko/Drop"
+import { Drop as PlinkoDrop } from "../model/game/PlinkoTypes"
 import { SingleResultGameEvent, MultipleResultGameEvent } from "../model/GameEvent"
 import { GameSeed, MultiplayerGameSeed } from "../model/GameSeed"
-import { Gem as DiamondsGem } from "../model/Diamonds/Gem"
+import { Gem as DiamondsGem } from "../model/game/DiamondsTypes"
 import { Risk } from "../model/Risk"
-import { Rows as PlinkoRows } from "../model/Plinko/Rows"
-import { Segments as WheelSegments } from "../model/Wheel/Segments"
-import { Spin as WheelSpin } from "../model/Wheel/Spin"
-import { Symbol as BlueSamuraiSymbol } from "../model/BlueSamurai/Symbol"
-import { Symbol as ScarabSpinSymbol } from "../model/ScarabSpin/Symbol"
+import { Rows as PlinkoRows } from "../model/game/PlinkoTypes"
+import { Segments as WheelSegments, Spin as WheelSpin } from "../model/game/WheelTypes"
+import { Symbol as BlueSamuraiSymbol } from "../model/game/BlueSamuraiTypes"
+import { Symbol as ScarabSpinSymbol } from "../model/game/ScarabSpinTypes"
 
 export class StakeVerificationApi {
   verifyBlueSamurai(

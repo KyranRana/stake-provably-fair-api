@@ -23,7 +23,7 @@ export function getFloatForGameSeed(gameSeed: GameSeed): InternalGameEventFloat 
 export function getFloatsForGameSeed(
   gameSeed:         GameSeed, 
   numberOfFloats:   number
-): InternalGameEventFloats {  
+): InternalGameEventFloats {
   return getFloatsForGameSeedStartingFromOffset(gameSeed, numberOfFloats, 0)
 }
 

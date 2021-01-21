@@ -2,7 +2,7 @@ import verifyBlueSamurai from "../main/BlueSamurai"
 
 import { MultipleResultGameEvent } from "../main/model/GameEvent"
 import { GameSeed } from "../main/model/GameSeed"
-import { Symbol } from "../main/model/BlueSamurai/Symbol"
+import { Symbol } from "../main/model/game/BlueSamuraiTypes"
 
 import GameSeeds from "./resources/GameSeeds.json"
 

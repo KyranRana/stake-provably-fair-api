@@ -2,7 +2,7 @@ import { getFloatsForGameSeedStartingFromOffset } from "./generator/FloatGenerat
 
 import { MultipleResultGameEvent } from "./model/GameEvent"
 import { GameSeed } from "./model/GameSeed"
-import { Symbol } from "./model/ScarabSpin/Symbol"
+import { Symbol } from "./model/game/ScarabSpinTypes"
 
 import ScarabSlotReels from "./resources/ScarabSlotReels.json"
 
