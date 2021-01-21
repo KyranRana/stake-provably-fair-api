@@ -1,11 +1,9 @@
 import verifyPlinko from "../main/Plinko"
 
-import { Direction } from "../main/model/Plinko/Direction"
-import { Drop } from "../main/model/Plinko/Drop"
+import { Direction, Drop, Rows } from "../main/model/game/PlinkoTypes"
 import { SingleResultGameEvent } from "../main/model/GameEvent"
 import { GameSeed } from "../main/model/GameSeed"
 import { Risk } from "../main/model/Risk"
-import { Rows } from "../main/model/Plinko/Rows"
 
 import GameSeeds from "./resources/GameSeeds.json"
 import PlinkoMultiplierRows from "../main/resources/PlinkoMultiplierRows.json"

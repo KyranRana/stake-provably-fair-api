@@ -1,11 +1,9 @@
 import { getFloatsForGameSeed } from "./generator/FloatGenerator"
 
-import { Direction } from "./model/Plinko/Direction"
-import { Drop } from "./model/Plinko/Drop"
+import { Direction, Drop, Rows } from "./model/game/PlinkoTypes"
 import { SingleResultGameEvent } from "./model/GameEvent"
 import { GameSeed } from "./model/GameSeed"
 import { Risk } from "./model/Risk"
-import { Rows } from "./model/Plinko/Rows"
 
 import PlinkoMultiplierRows from "./resources/PlinkoMultiplierRows.json"
 

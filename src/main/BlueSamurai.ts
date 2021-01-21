@@ -3,7 +3,7 @@ import { getFloatsForGameSeedStartingFromOffset } from "./generator/FloatGenerat
 
 import { MultipleResultGameEvent } from "./model/GameEvent"
 import { GameSeed } from "./model/GameSeed"
-import { Symbol } from "./model/BlueSamurai/Symbol"
+import { Symbol } from "./model/game/BlueSamuraiTypes"
 
 import Probabilities from "./resources/BlueSamuraiProbabilities.json"
 

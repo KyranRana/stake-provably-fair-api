@@ -2,7 +2,7 @@ import verifyDiamonds from "../main/Diamonds"
 
 import { MultipleResultGameEvent } from "../main/model/GameEvent"
 import { GameSeed } from "../main/model/GameSeed"
-import { Gem } from "../main/model/Diamonds/Gem"
+import { Gem } from "../main/model/game/DiamondsTypes"
 
 import GameSeeds from "./resources/GameSeeds.json"
 
