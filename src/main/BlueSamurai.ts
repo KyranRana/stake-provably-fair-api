@@ -9,14 +9,19 @@ import Probabilities from "./resources/BlueSamuraiProbabilities.json"
 
 const REELS_LENGTHS = [3, 4, 4, 4, 3]
 const NUMBER_OF_FLOATS_PER_ROUND = 18
+const NUMBER_OF_FLOATS_PER_SPECIAL_ROUND = 12
 
 export default function verifyBlueSamurai(
-  gameSeed:   GameSeed, 
-  fromRound:  number, 
-  toRound:    number
+  gameSeed:       GameSeed, 
+  fromRound:      number, 
+  toRound:        number,
+  special:        boolean = false
 ): MultipleResultGameEvent<Symbol[][]> {
 
-  const numberOfIgnoredFloats = fromRound * NUMBER_OF_FLOATS_PER_ROUND
+  const numberOfIgnoredFloats = special 
+    ? NUMBER_OF_FLOATS_PER_ROUND + ((fromRound - 1) * NUMBER_OF_FLOATS_PER_SPECIAL_ROUND)
+    : fromRound * NUMBER_OF_FLOATS_PER_ROUND
+
   const numberOfFloats = (toRound - fromRound + 1) * NUMBER_OF_FLOATS_PER_ROUND
   
   const { floats, hmacsUsed } = getFloatsForGameSeedStartingFromOffset(
@@ -25,38 +30,68 @@ export default function verifyBlueSamurai(
     numberOfIgnoredFloats
   )
   
-  const rounds = generateRounds(fromRound, toRound, floats)
+  const rounds = generateRounds(
+    fromRound, 
+    toRound, 
+    floats,
+    special
+  )
+  
   return { results: rounds, hmacsUsed }
 }
 
-function generateRounds(fromRound: number, toRound: number, floats: number[]): Symbol[][][] {
+function generateRounds(
+  fromRound:      number, 
+  toRound:        number, 
+  floats:         number[],
+  special:        boolean
+): Symbol[][][] {
+  
   const rounds = []
   for (var i = fromRound; i <= toRound; i++) {
-    rounds.push(generateView(i - fromRound, floats))
+    rounds.push(
+      generateView(
+        i - fromRound, 
+        floats, 
+        special
+      )
+    )
   }
   return rounds
 }
 
-function generateView(currentRound: number, floats: number[]) {
-  let cellPosition = currentRound * NUMBER_OF_FLOATS_PER_ROUND
+function generateView(
+  currentRound:   number, 
+  floats:         number[],
+  special:        boolean
+) {
+  let cellPosition = currentRound * (special 
+    ? NUMBER_OF_FLOATS_PER_SPECIAL_ROUND 
+    : NUMBER_OF_FLOATS_PER_ROUND)
 
   const symbols: Symbol[][] = []
-
   for (let i = 0; i < REELS_LENGTHS.length; i++) {   
     const isOuter = i === 0 || i === 4
-    
+    if (special && isOuter) {
+      continue
+    }
+
     symbols[i] = []
-    
     for (let j = 0; j < REELS_LENGTHS[i]; j++) {
-      const float = floats[currentRound * NUMBER_OF_FLOATS_PER_ROUND + cellPosition++]
-      
-      symbols[i][j] = selectSymbol(float, isOuter)
+      symbols[i][j] = selectSymbol(
+        floats[cellPosition++], 
+        isOuter
+      )
     }
   }
 
-  symbols[0][3] = Symbol.NONE
-  symbols[4][3] = Symbol.NONE
-
+  if (!special) {
+    symbols[0][3] = Symbol.NONE
+    symbols[4][3] = Symbol.NONE
+  } else {
+    symbols.shift()
+  }
+  
   return transpose(symbols)
 }
 
